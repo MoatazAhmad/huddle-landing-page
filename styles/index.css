@@ -1,0 +1,168 @@
+@layer reset, base, components, utilities;
+@import url(./globals.css) layer(base);
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: oklch(70% 0.25 160);
+}
+
+.font-poppins {
+    font-family: "Poppins", sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    height: 98%;
+}
+
+.logo-container {
+    width: 120px;
+}
+
+.imgs-section {
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    flex: 1;
+}
+
+
+.info-section {
+    flex: 1;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 70px;
+}
+
+.info-section .text {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+.social-icons-list {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+
+}
+
+.social-icons-list:hover li {
+    animation: social-pulse 0.6s var(--ease-in-out);
+}
+.social-icons-list li a {
+    width: 40px;
+    border-radius: 50%;
+    border: 1px solid white;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s var(--ease-in-out);
+}
+
+.social-icons-list li a:hover {
+    border-color: var(--soft-magenta);
+    color: var(--soft-magenta);
+    transform: translateY(-0.25rem) scale(1.1);
+    will-change: transform;
+}
+
+
+/* Add micro-interaction */
+@keyframes social-pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+
+
+button {
+    width: 200px;
+    padding-block: 15px;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: var(--violet);
+    font-size: 15px;
+    font-weight: bold;
+    box-shadow: rgba(0, 0, 0, 0.55) 0px 5px 16px;
+    transition: 200ms ease-in-out;
+
+}
+
+button:hover {
+    border-radius: 0px;
+    background-color: var(--soft-magenta);
+    color: white;
+}
+
+@media (min-width:40rem) {
+    .imgs-section {
+        gap: 40px;
+    }
+}
+
+@media (min-width:48rem) {
+    .imgs-section {
+        gap: 20px;
+    }
+}
+
+@media (min-width:64rem) {
+    .container {
+        flex-direction: row;
+        padding: 60px;
+        gap: 40px;
+    }
+
+    .imgs-section {
+        height: 100%;
+        gap: 140px;
+        flex-basis: 50%;
+    }
+
+    .info-section {
+        height: 100%;
+        flex-basis: 40%;
+        justify-content: center;
+        margin-top: 40px;
+    }
+
+    .info-section .text {
+        align-items: start;
+        text-align: start;
+    }
+
+    .info-section ul {
+        bottom: -200px;
+        position: relative;
+        left: 100px;
+    }
+
+    .logo-container {
+        width: 200px;
+    }
+}

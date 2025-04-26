@@ -1,0 +1,45 @@
+:root {
+    --violet: hsl(257, 40%, 49%);
+    --soft-magenta: hsl(300, 69%, 71%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 200ms ease-in-out;
+}
+
+a {
+    all: unset;
+    cursor: pointer;
+    color: inherit;
+    text-decoration: none;
+    display: inline-block;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    background-color: var(--violet);
+    background-image: url(../images/bg-mobile.svg);
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+@media (min-width: 64em) {
+    body {
+        background-image: url(../images/bg-desktop.svg);
+        background-position: right;
+        background-size: cover;
+    }
+}
+
